@@ -1,0 +1,16 @@
+export function formatCurrency(amount, currency = 'USD') {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency,
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(amount)
+}
+
+export function formatDate(dateString) {
+  if (!dateString) {
+    return ''
+  }
+
+  return new Date(dateString).toLocaleDateString('en-GB')
+}

@@ -1,4 +1,4 @@
-import React from 'react'
+import PolicyRow from './PolicyRow'
 
 export default function PolicyTable({ policies, selectedIds, onToggleSelect, onSelectAll, allSelected }) {
   if (!policies.length) {
@@ -19,7 +19,7 @@ export default function PolicyTable({ policies, selectedIds, onToggleSelect, onS
               <input
                 type="checkbox"
                 checked={allSelected}
-                onChange={onSelectAll}
+                onChange={(event) => onSelectAll(event.target.checked)}
                 aria-label={allSelected ? 'Deselect all policies' : 'Select all policies'}
               />
             </th>
@@ -36,41 +36,15 @@ export default function PolicyTable({ policies, selectedIds, onToggleSelect, onS
         </thead>
         <tbody>
           {policies.map((policy) => (
-            <tr key={policy.id}>
-              <td>
-                <input
-                  type="checkbox"
-                  checked={selectedIds.includes(policy.id)}
-                  onChange={() => onToggleSelect(policy.id)}
-                  aria-label={`Select policy ${policy.policyNumber}`}
-                />
-              </td>
-              <td>{policy.policyNumber}</td>
-              <td>{policy.policyholderName}</td>
-              <td>{policy.lineOfBusiness}</td>
-              <td>{policy.status}</td>
-              <td>{formatCurrency(policy.premiumAmount, policy.currency)}</td>
-              <td>{formatDate(policy.effectiveDate)}</td>
-              <td>{formatDate(policy.expiryDate)}</td>
-              <td>{policy.region}</td>
-              <td>{policy.flaggedForReview ? 'Yes' : 'No'}</td>
-            </tr>
+            <PolicyRow
+              key={policy.id}
+              policy={policy}
+              selected={selectedIds.includes(policy.id)}
+              onToggleSelect={onToggleSelect}
+            />
           ))}
         </tbody>
       </table>
     </section>
   )
-}
-
-function formatCurrency(amount, currency) {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency,
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount)
-}
-
-function formatDate(dateString) {
-  return new Date(dateString).toLocaleDateString('en-GB')
 }
