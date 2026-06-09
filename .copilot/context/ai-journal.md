@@ -14,73 +14,39 @@ Tracks all AI interactions for review and monitoring.
 
 ## Entries
 
-- Prompt: "Add tech-stack.md with Frontend (React, Vite, React Router, Zustand, Material UI), Mock Backend (JSON Server v0.17.4), Data (db.json), Testing (Vitest v1.5, React Testing Library v14.0)"
-  Timestamp: 2026-06-09T00:00:00Z
-  Response: "Created tech-stack.md with all specified technologies and versions. Added entry to ai-journal.md."
-  Outcome: accepted
-
-- Prompt: "Update tech-stack.md with detailed version table format showing specific versions (React 19.2.7, Vite 8.0.16, React Router 7.17.0, Zustand 5.0.14, Material UI 9.1.0, JSON Server 0.17.2, Vitest 4.1, React Testing Library 16.3.2) and compatibility between libraries"
-  Timestamp: 2026-06-09T00:02:00Z
-  Response: "Updated tech-stack.md to table format with Library/Tool, Version, and Works With columns. Added detailed compatibility information for all dependencies."
-  Outcome: accepted
-
-- Prompt: "Add accessibility rules covering WCAG 2.1 Level AA compliance, semantic components, text alternatives, color contrast, keyboard accessibility, visible focus, form labels, ARIA roles, responsive design, headings/landmarks, and language settings"
-  Timestamp: 2026-06-09T00:03:00Z
-  Response: "Created accessibility.md with 11 sections of accessibility rules for Material UI components and WCAG compliance."
-  Outcome: accepted
-
-- Prompt: "Add project architecture with directory structure (src/assets, components, pages, store, styles, utils, i18n, tests, App.jsx, main.jsx) and key principles"
-  Timestamp: 2026-06-09T00:04:00Z
-  Response: "Created architecture.md with directory structure, table of purposes, and key principles for components, store, styles, and utils."
-  Outcome: accepted
-
-- Prompt: "Add React + Material UI coding standards covering file size limits, naming conventions, test file colocation, and things to never do"
-  Timestamp: 2026-06-09T00:05:00Z
-  Response: "Created coding-standards.md with 11 file size rules, 11 naming conventions, 3 test file rules, and 10 things to never do practices."
-  Outcome: accepted
-
-- Prompt: "Add error handling rules: implement top-level ErrorBoundary, wrap feature routes with ErrorBoundary for isolation, and wrap all API calls (axios) in try/catch"
-  Timestamp: 2026-06-09T00:06:00Z
-  Response: "Created error-handling.md with 9 error handling rules covering ErrorBoundary, async error handling, user feedback, logging, storage/recovery, accessibility, config, and testing."
-  Outcome: accepted
-
-- Prompt: "Add i18n rules: never hardcode strings in UI, create all texts as constants in separate place, support English only for now, use standard React currency pipe for formatting"
-  Timestamp: 2026-06-09T00:07:00Z
-  Response: "Created i18n.md with 4 rules for string management, constant storage, English-only support, and currency formatting."
-  Outcome: accepted
-
-- Prompt: "Add security rules: React escapes values by default, use dangerouslySetInnerHTML cautiously with sanitization, create SafeHTMLRenderer utility, use fetch/axios for API calls, no PII in logs, never include sensitive data in URL parameters"
-  Timestamp: 2026-06-09T00:08:00Z
-  Response: "Created security.md with 5 rules covering XSS safety, HTML sanitization, HTTP requests, logging, and sensitive data protection."
-  Outcome: accepted
-
-- Prompt: "Add storage rules: create single StorageService for all localStorage/sessionStorage operations, never access raw storage directly, all error handling in StorageService only"
-  Timestamp: 2026-06-09T00:09:00Z
-  Response: "Created storage.md with 3 rules for centralized StorageService, preventing direct storage access, and encapsulated error handling."
-  Outcome: accepted
-
-- Prompt: "Add styling rules for dark mode: semantic tokens, ThemeProvider, contrast ratios, background/surface colors, text colors, interactive elements, error/success/warning colors"
-  Timestamp: 2026-06-09T00:10:00Z
-  Response: "Created styling.md with 14 rules for theme tokens, dark mode setup, color/contrast standards, and interactive elements."
-  Outcome: accepted
-
-- Prompt: "Add testing rules: Vitest test runner, RTL component testing, user-centric queries, Vitest mocking, smart/dumb component testing, services testing, accessibility testing, error states, file naming"
-  Timestamp: 2026-06-09T00:11:00Z
-  Response: "Created testing.md with 18 testing rules covering test runner setup, component/service testing, mocking, accessibility, error states, and file colocation."
-  Outcome: accepted
-
-- Prompt: "Add files that should be ignored to git repo"
-  Timestamp: 2026-06-09T00:12:00Z
-  Response: "Created .gitignore with standard ignores for Node dependencies, build artifacts, environment files, IDE files, OS files, logs, and testing coverage."
-  Outcome: accepted
-
-- Prompt: "Add info that all rules files have to be referred to whenever generating code"
-  Timestamp: 2026-06-09T00:13:00Z
-  Response: "Created COPILOT.MD with guidelines stating all rules files (accessibility, architecture, coding-standards, error-handling, i18n, security, storage, styling, testing) must be referred to before generating code."
-  Outcome: accepted
+| # | Timestamp | Prompt Summary | Response Summary | Outcome |
+|---|-----------|----------------|------------------|---------|
+| 1 | 2026-06-09T00:00:00Z | Add tech-stack.md with Frontend (React, Vite, React Router, Zustand, Material UI), Mock Backend (JSON Server), Testing (Vitest, RTL) | Created tech-stack.md with all specified technologies and versions | accepted |
+| 2 | 2026-06-09T00:02:00Z | Update tech-stack.md with detailed version table format (React 19.2.7, Vite 8.0.16, React Router 7.17.0, Zustand 5.0.14, Material UI 9.1.0, JSON Server 0.17.2, Vitest 4.1, RTL 16.3.2) | Updated tech-stack.md to table format with Library, Version, and Works With columns | accepted |
+| 3 | 2026-06-09T00:03:00Z | Add accessibility rules covering WCAG 2.1 Level AA, semantic components, text alternatives, color contrast, keyboard accessibility, focus, form labels, ARIA | Created accessibility.md with 11 sections of accessibility rules for Material UI | accepted |
+| 4 | 2026-06-09T00:04:00Z | Add project architecture with directory structure and key principles | Created architecture.md with directory structure, table of purposes, and principles | accepted |
+| 5 | 2026-06-09T00:05:00Z | Add React + Material UI coding standards (file size, naming, test colocation, do's and don'ts) | Created coding-standards.md with file size rules, naming conventions, and best practices | accepted |
+| 6 | 2026-06-09T00:06:00Z | Add error handling rules: ErrorBoundary, feature route isolation, API calls with try/catch | Created error-handling.md with 3 core error handling rules | accepted |
+| 7 | 2026-06-09T00:07:00Z | Add i18n rules: no hardcoded strings, constants storage, English-only, currency formatting | Created i18n.md with 4 rules for string management and localization | accepted |
+| 8 | 2026-06-09T00:08:00Z | Add security rules: XSS safety, HTML sanitization, API calls, no PII logging, sensitive data protection | Created security.md with 5 rules covering XSS, sanitization, and data protection | accepted |
+| 9 | 2026-06-09T00:09:00Z | Add storage rules: StorageService, no direct storage access, error handling encapsulation | Created storage.md with 3 rules for centralized storage operations | accepted |
+| 10 | 2026-06-09T00:10:00Z | Add styling rules for dark mode, tokens, contrast ratios, colors, interactive elements | Created styling.md with 14 rules for theme tokens and dark mode | accepted |
+| 11 | 2026-06-09T00:11:00Z | Add testing rules: Vitest, RTL, mocking, component/service testing, accessibility, error states | Created testing.md with 18 rules for test setup and coverage | accepted |
+| 12 | 2026-06-09T00:12:00Z | Add files that should be ignored to git repo | Created .gitignore with standard ignores for dependencies, build, env, IDE, logs | accepted |
+| 13 | 2026-06-09T00:13:00Z | Add info that all rules files must be referred to when generating code | Created COPILOT.MD with guidelines and code generation checklist | accepted |
 
 ## Template
-- Prompt: ""
-  Timestamp: ""
-  Response: ""
-  Outcome: ""
+
+| 14 | 2026-06-09T00:14:00Z | Add package.json with React 19.2.7, Vite 8.0.16, React Router 7.17.0, Zustand 5.0.14, Material UI 9.1.0, JSON Server 0.17.2, Vitest 4.1.0, RTL 16.3.2; scripts: start, build, db, test | Created package.json with all dependencies, versions pinned exactly, npm scripts for dev/build/db/test | accepted |
+| 15 | 2026-06-09T00:15:00Z | Add vite.config.js with React plugin and dev server on port 5173 | Created vite.config.js with defineConfig, @vitejs/plugin-react, and port 5173 | accepted |
+| 16 | 2026-06-09T00:16:00Z | Scaffold React v19 app: create src/ directory structure (features/, core/, infrastructure/, styles/), App.jsx with React Router, Dashboard component, main.jsx entry point | Created src/App.jsx with BrowserRouter/Routes/Route, src/main.jsx entry point, src/features/dashboard/Dashboard.jsx placeholder | accepted |
+| 17 | 2026-06-09T00:17:00Z | Create seed.js script to generate 200 mock APAC policy records with realistic names, all required fields (id, policyNumber, policyholderName, lineOfBusiness, status, premiumAmount, currency, effectiveDate, expiryDate, region, underwriter, flaggedForReview) | Created seed.js with APAC names, random policies generator, writes db.json; supports all 8 regions, 4 LOB, 4 statuses, 6 currencies | accepted |
+| 18 | 2026-06-09T00:18:00Z | Generate 200 mock policies in db.json via seed script with 8 APAC regions (Singapore, Hong Kong, Australia, Japan, Thailand, Indonesia, Malaysia, Philippines) | Ran seed.js successfully, generated db.json with 200 policy records with UUIDs, realistic names, all fields, APAC regions | accepted |
+| 19 | 2026-06-09T00:19:00Z | Create SCSS styling with global styles and main styles.scss | Created src/styles/styles.scss with global styles, Material UI integration, font setup, dark mode ready | accepted |
+| 20 | 2026-06-09T00:20:00Z | Create .env file with VITE_API_BASE_URL=http://localhost:3000 | Created .env with API base URL for json-server on port 3000 | accepted |
+| 21 | 2026-06-09T00:21:00Z | Create proxy.json for API request forwarding to json-server | Created proxy.json with /api/* routing to http://localhost:3000 | accepted |
+| 22 | 2026-06-09T00:22:00Z | Create index.html as Vite entry point with root div and React app bootstrap | Created index.html with doctype, meta viewport, root div, main.jsx module script | accepted |
+| 23 | 2026-06-09T00:23:00Z | Create .gitignore at project root (not in .copilot/) to exclude node_modules, dist, .env, logs, while keeping .copilot/ tracked | Created .gitignore with standard ignores + exceptions for .copilot/context/ and .copilot/rules/ | accepted |
+| 24 | 2026-06-09T00:24:00Z | Create README.md with setup instructions, tech stack, project structure, available scripts, API endpoints, mock data schema | Created README.md with Quick Start (npm install, node seed.js, npm run db + npm run start), scripts, API endpoints, development rules reference | accepted |
+| 25 | 2026-06-09T00:25:00Z | Add npm install, run seed.js, verify db.json with 200 records | Installed 303 packages successfully; seed.js generated db.json with 200 policy records verified with first 3 records showing correct APAC data | accepted |
+
+## Template
+
+| # | Timestamp | Prompt Summary | Response Summary | Outcome |
+|---|-----------|----------------|------------------|---------|
+| | | | | |
