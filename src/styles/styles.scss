@@ -25,13 +25,64 @@ main {
   margin: 0 auto;
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #1976d2;
+.dashboard-header {
+  margin-bottom: 1.5rem;
 }
 
-p {
-  font-size: 1rem;
-  line-height: 1.5;
+.loading-state,
+.error-state,
+.empty-state {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  border: 1px solid #d1d5db;
+  color: #111827;
+  margin-bottom: 1.5rem;
+}
+
+.policy-table-section {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08);
+}
+
+.policy-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.policy-table caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.policy-table th,
+.policy-table td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.policy-table th {
+  background: #f9fafb;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.policy-table tbody tr:hover {
+  background: #f3f4f6;
+}
+
+.policy-table td {
+  font-size: 0.95rem;
+  color: #111827;
+}
+
+.policy-table td:nth-child(5) {
+  white-space: nowrap;
 }
