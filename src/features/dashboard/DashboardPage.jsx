@@ -58,7 +58,7 @@ export default function DashboardPage({
 
       {message && <div className="info-state">{message}</div>}
       {error && <div className="error-state">Error loading policies: {error}</div>}
-      {loading && <div className="loading-state">Loading policies…</div>}
+      {loading && <div className="loading-state">Loading policies...</div>}
 
       {!loading && !error && (
         <TableControls

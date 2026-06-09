@@ -1,5 +1,5 @@
-import { describe, expect, it, vi } from 'vitest'
-import { fireEvent, render, screen } from '@testing-library/react'
+import { afterEach, describe, expect, it, vi } from 'vitest'
+import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 import PolicyTable from './PolicyTable'
 
 const policies = [
@@ -19,6 +19,10 @@ const policies = [
 ]
 
 describe('PolicyTable', () => {
+  afterEach(() => {
+    cleanup()
+  })
+
   it('renders column headers and policy row', () => {
     render(
       <PolicyTable

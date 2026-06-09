@@ -1,4 +1,5 @@
 import { useEffect, useMemo } from 'react'
+import { useShallow } from 'zustand/react/shallow'
 import { usePolicyStore } from '../../core/state/usePolicyStore'
 import DashboardPage from './DashboardPage'
 
@@ -36,28 +37,30 @@ export default function DashboardContainer() {
     togglePolicy,
     selectAll,
     deselectAll,
-  } = usePolicyStore((state) => ({
-    policies: state.policies,
-    summaryData: state.summaryData,
-    selectedIds: state.selectedIds,
-    filters: state.filters,
-    pagination: state.pagination,
-    sort: state.sort,
-    loading: state.loading,
-    error: state.error,
-    message: state.message,
-    totalCount: state.totalCount,
-    loadPolicies: state.loadPolicies,
-    flagSelected: state.flagSelected,
-    setFilter: state.setFilter,
-    setPage: state.setPage,
-    setPageSize: state.setPageSize,
-    setSort: state.setSort,
-    resetFilters: state.resetFilters,
-    togglePolicy: state.togglePolicy,
-    selectAll: state.selectAll,
-    deselectAll: state.deselectAll,
-  }))
+  } = usePolicyStore(
+    useShallow((state) => ({
+      policies: state.policies,
+      summaryData: state.summaryData,
+      selectedIds: state.selectedIds,
+      filters: state.filters,
+      pagination: state.pagination,
+      sort: state.sort,
+      loading: state.loading,
+      error: state.error,
+      message: state.message,
+      totalCount: state.totalCount,
+      loadPolicies: state.loadPolicies,
+      flagSelected: state.flagSelected,
+      setFilter: state.setFilter,
+      setPage: state.setPage,
+      setPageSize: state.setPageSize,
+      setSort: state.setSort,
+      resetFilters: state.resetFilters,
+      togglePolicy: state.togglePolicy,
+      selectAll: state.selectAll,
+      deselectAll: state.deselectAll,
+    })),
+  )
 
   useEffect(() => {
     loadPolicies()
