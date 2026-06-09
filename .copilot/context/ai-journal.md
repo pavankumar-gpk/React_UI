@@ -11,6 +11,7 @@ Tracks all AI interactions for review and monitoring.
 ## Rules
 - **Every prompt must be logged** in this journal immediately after interaction
 - Record all AI interactions, no exceptions
+- Prompt entries may be stored as a short summary for readability; full verbatim prompt text can be recorded on request
 
 ## Entries
 

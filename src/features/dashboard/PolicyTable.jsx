@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function PolicyTable({ policies }) {
+export default function PolicyTable({ policies, selectedIds, onToggleSelect, onSelectAll, allSelected }) {
   if (!policies.length) {
     return (
       <div className="empty-state" role="status">
@@ -15,6 +15,14 @@ export default function PolicyTable({ policies }) {
         <caption>Policy overview table</caption>
         <thead>
           <tr>
+            <th scope="col">
+              <input
+                type="checkbox"
+                checked={allSelected}
+                onChange={onSelectAll}
+                aria-label={allSelected ? 'Deselect all policies' : 'Select all policies'}
+              />
+            </th>
             <th scope="col">Policy #</th>
             <th scope="col">Policyholder</th>
             <th scope="col">LOB</th>
@@ -29,6 +37,14 @@ export default function PolicyTable({ policies }) {
         <tbody>
           {policies.map((policy) => (
             <tr key={policy.id}>
+              <td>
+                <input
+                  type="checkbox"
+                  checked={selectedIds.includes(policy.id)}
+                  onChange={() => onToggleSelect(policy.id)}
+                  aria-label={`Select policy ${policy.policyNumber}`}
+                />
+              </td>
               <td>{policy.policyNumber}</td>
               <td>{policy.policyholderName}</td>
               <td>{policy.lineOfBusiness}</td>
