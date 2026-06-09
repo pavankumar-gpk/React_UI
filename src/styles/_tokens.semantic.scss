@@ -1,0 +1,54 @@
+@use './tokens.primitives' as primitives;
+
+:root,
+html[data-theme='light'] {
+  color-scheme: light;
+  --color-background: #{primitives.$neutral-50};
+  --color-surface: #{primitives.$white};
+  --color-surface-raised: #{primitives.$neutral-50};
+  --color-surface-hover: #{primitives.$neutral-100};
+  --color-text-primary: #{primitives.$neutral-900};
+  --color-text-secondary: #{primitives.$neutral-500};
+  --color-border: #{primitives.$neutral-300};
+  --color-border-muted: #{primitives.$neutral-200};
+  --color-primary: #{primitives.$blue-600};
+  --color-primary-hover: #{primitives.$blue-700};
+  --color-primary-contrast: #{primitives.$white};
+  --color-focus: #{primitives.$blue-600};
+  --color-error-surface: #{primitives.$red-50};
+  --color-error-border: #{primitives.$red-100};
+  --color-error-text: #{primitives.$red-800};
+  --color-info-surface: #{primitives.$blue-50};
+  --color-info-border: #{primitives.$blue-100};
+  --color-info-text: #{primitives.$blue-700};
+  --color-success-surface: #{primitives.$green-50};
+  --color-success-border: #{primitives.$green-100};
+  --color-success-text: #{primitives.$green-700};
+  --shadow-surface: 0 1px 4px rgba(15, 23, 42, 0.08);
+}
+
+html[data-theme='dark'] {
+  color-scheme: dark;
+  --color-background: #{primitives.$neutral-950};
+  --color-surface: #{primitives.$dark-surface};
+  --color-surface-raised: #{primitives.$dark-surface-raised};
+  --color-surface-hover: #{primitives.$dark-surface-hover};
+  --color-text-primary: #{primitives.$neutral-100};
+  --color-text-secondary: #b0b8c4;
+  --color-border: #{primitives.$dark-border};
+  --color-border-muted: #303743;
+  --color-primary: #{primitives.$blue-300};
+  --color-primary-hover: #{primitives.$blue-200};
+  --color-primary-contrast: #{primitives.$neutral-900};
+  --color-focus: #{primitives.$blue-300};
+  --color-error-surface: #{primitives.$dark-error};
+  --color-error-border: #7f1d1d;
+  --color-error-text: #{primitives.$red-300};
+  --color-info-surface: #{primitives.$dark-info};
+  --color-info-border: #1e3a5f;
+  --color-info-text: #{primitives.$blue-200};
+  --color-success-surface: #{primitives.$dark-success};
+  --color-success-border: #14532d;
+  --color-success-text: #{primitives.$green-300};
+  --shadow-surface: 0 1px 8px rgba(0, 0, 0, 0.34);
+}

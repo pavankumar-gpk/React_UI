@@ -1,6 +1,6 @@
 import { useEffect, useMemo } from 'react'
 import { useShallow } from 'zustand/react/shallow'
-import { usePolicyStore } from '../../core/state/usePolicyStore'
+import { usePolicyStore } from '../../store/usePolicyStore'
 import DashboardPage from './DashboardPage'
 
 const statusOptions = ['Active', 'Expired', 'Pending', 'Cancelled']

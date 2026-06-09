@@ -1,4 +1,4 @@
-import { formatCurrency, formatDate } from '../../core/utils/formatters'
+import { formatCurrency, formatDate } from '../../utils/formatters'
 
 export default function PolicyRow({ policy, selected, onToggleSelect }) {
   return (

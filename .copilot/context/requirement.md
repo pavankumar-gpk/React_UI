@@ -71,3 +71,6 @@ Empty states when no data matches filters
 Error states with meaningful messages and retry options 
 
 Optimistic updates where appropriate (e.g., flagging for review) 
+
+Support light and dark themes with a user toggle. The implementation 
+should reflect modern design token practice, with theme preferences persisted across sessions and system preferences respected as defaults.

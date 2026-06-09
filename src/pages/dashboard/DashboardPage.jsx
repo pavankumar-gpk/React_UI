@@ -1,7 +1,8 @@
-import FilterPanel from './FilterPanel'
-import SummaryPanel from './SummaryPanel'
-import TableControls from './TableControls'
-import PolicyTable from './PolicyTable'
+import FilterPanel from '../../components/dashboard/FilterPanel'
+import SummaryPanel from '../../components/dashboard/SummaryPanel'
+import TableControls from '../../components/dashboard/TableControls'
+import ThemeToggle from '../../components/dashboard/ThemeToggle'
+import PolicyTable from '../../components/dashboard/PolicyTable'
 
 export default function DashboardPage({
   policies,
@@ -33,8 +34,11 @@ export default function DashboardPage({
   return (
     <main>
       <header className="dashboard-header">
-        <h1>Policy Overview Dashboard</h1>
-        <p>View and manage APAC insurance policies with filters, sorting, bulk actions, and summary insights.</p>
+        <div className="dashboard-header__content">
+          <h1>Policy Overview Dashboard</h1>
+          <p>View and manage APAC insurance policies with filters, sorting, bulk actions, and summary insights.</p>
+        </div>
+        <ThemeToggle />
       </header>
 
       <section className="dashboard-grid">
