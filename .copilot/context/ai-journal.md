@@ -30,9 +30,6 @@ Tracks all AI interactions for review and monitoring.
 | 11 | 2026-06-09T00:11:00Z | Add testing rules: Vitest, RTL, mocking, component/service testing, accessibility, error states | Created testing.md with 18 rules for test setup and coverage | accepted |
 | 12 | 2026-06-09T00:12:00Z | Add files that should be ignored to git repo | Created .gitignore with standard ignores for dependencies, build, env, IDE, logs | accepted |
 | 13 | 2026-06-09T00:13:00Z | Add info that all rules files must be referred to when generating code | Created COPILOT.MD with guidelines and code generation checklist | accepted |
-
-## Template
-
 | 14 | 2026-06-09T00:14:00Z | Add package.json with React 19.2.7, Vite 8.0.16, React Router 7.17.0, Zustand 5.0.14, Material UI 9.1.0, JSON Server 0.17.2, Vitest 4.1.0, RTL 16.3.2; scripts: start, build, db, test | Created package.json with all dependencies, versions pinned exactly, npm scripts for dev/build/db/test | accepted |
 | 15 | 2026-06-09T00:15:00Z | Add vite.config.js with React plugin and dev server on port 5173 | Created vite.config.js with defineConfig, @vitejs/plugin-react, and port 5173 | accepted |
 | 16 | 2026-06-09T00:16:00Z | Scaffold React v19 app: create src/ directory structure (features/, core/, infrastructure/, styles/), App.jsx with React Router, Dashboard component, main.jsx entry point | Created src/App.jsx with BrowserRouter/Routes/Route, src/main.jsx entry point, src/features/dashboard/Dashboard.jsx placeholder | accepted |
